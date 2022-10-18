@@ -1,0 +1,111 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Dataset_persona_comas_res-weka.filters.unsupervised.attribute.Discretize-B4-M-1.0-Rfirst-last-precision6
+Instances:    9713
+Attributes:   8
+              Zona
+              Sexo
+              Edad
+              Estado Civil
+              Pueblo
+              Nivel edu
+              Matricula
+              Prox Nivel ed
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Prox Nivel ed <= 13
+|   Edad = '(-inf-24.5]'
+|   |   Estado Civil = '(-inf-2.25]': '(-inf-20.25]' (1341.0/334.0)
+|   |   Estado Civil = '(2.25-3.5]': '(40.5-60.75]' (168.0/8.0)
+|   |   Estado Civil = '(3.5-4.75]': '(40.5-60.75]' (10.0/2.0)
+|   |   Estado Civil = '(4.75-inf)': '(60.75-inf)' (2.0)
+|   Edad = '(24.5-49]'
+|   |   Zona = Urbana
+|   |   |   Pueblo = '(-inf-1.5]': '(20.25-40.5]' (1015.0/270.0)
+|   |   |   Pueblo = '(1.5-2]'
+|   |   |   |   Estado Civil = '(-inf-2.25]': '(60.75-inf)' (1306.0/623.0)
+|   |   |   |   Estado Civil = '(2.25-3.5]': '(20.25-40.5]' (276.0/78.0)
+|   |   |   |   Estado Civil = '(3.5-4.75]'
+|   |   |   |   |   Sexo = Hombre: '(60.75-inf)' (20.0/9.0)
+|   |   |   |   |   Sexo = Mujer: '(20.25-40.5]' (72.0/26.0)
+|   |   |   |   Estado Civil = '(4.75-inf)': '(20.25-40.5]' (36.0/14.0)
+|   |   |   Pueblo = '(2-2.5]': '(20.25-40.5]' (0.0)
+|   |   |   Pueblo = '(2.5-inf)': '(60.75-inf)' (3.0/1.0)
+|   |   Zona = Rural: '(20.25-40.5]' (253.0/44.0)
+|   Edad = '(49-73.5]': '(20.25-40.5]' (1731.0/522.0)
+|   Edad = '(73.5-inf)'
+|   |   Zona = Urbana: '(20.25-40.5]' (252.0/78.0)
+|   |   Zona = Rural
+|   |   |   Sexo = Hombre: '(20.25-40.5]' (27.0/12.0)
+|   |   |   Sexo = Mujer: '(-inf-20.25]' (22.0/7.0)
+Prox Nivel ed > 13
+|   Prox Nivel ed <= 42: '(40.5-60.75]' (2204.0/145.0)
+|   Prox Nivel ed > 42
+|   |   Edad = '(-inf-24.5]'
+|   |   |   Prox Nivel ed <= 78: '(60.75-inf)' (625.0/188.0)
+|   |   |   Prox Nivel ed > 78: '(40.5-60.75]' (17.0/1.0)
+|   |   Edad = '(24.5-49]'
+|   |   |   Prox Nivel ed <= 65
+|   |   |   |   Prox Nivel ed <= 62: '(20.25-40.5]' (4.0)
+|   |   |   |   Prox Nivel ed > 62
+|   |   |   |   |   Prox Nivel ed <= 63: '(60.75-inf)' (7.0/2.0)
+|   |   |   |   |   Prox Nivel ed > 63: '(20.25-40.5]' (2.0)
+|   |   |   Prox Nivel ed > 65
+|   |   |   |   Prox Nivel ed <= 76: '(60.75-inf)' (270.0/14.0)
+|   |   |   |   Prox Nivel ed > 76
+|   |   |   |   |   Prox Nivel ed <= 80
+|   |   |   |   |   |   Estado Civil = '(-inf-2.25]': '(60.75-inf)' (23.0/4.0)
+|   |   |   |   |   |   Estado Civil = '(2.25-3.5]': '(40.5-60.75]' (3.0/1.0)
+|   |   |   |   |   |   Estado Civil = '(3.5-4.75]': '(60.75-inf)' (0.0)
+|   |   |   |   |   |   Estado Civil = '(4.75-inf)': '(60.75-inf)' (0.0)
+|   |   |   |   |   Prox Nivel ed > 80
+|   |   |   |   |   |   Pueblo = '(-inf-1.5]': '(60.75-inf)' (5.0/1.0)
+|   |   |   |   |   |   Pueblo = '(1.5-2]': '(20.25-40.5]' (6.0/1.0)
+|   |   |   |   |   |   Pueblo = '(2-2.5]': '(20.25-40.5]' (0.0)
+|   |   |   |   |   |   Pueblo = '(2.5-inf)': '(20.25-40.5]' (0.0)
+|   |   Edad = '(49-73.5]'
+|   |   |   Zona = Urbana: '(60.75-inf)' (9.0/2.0)
+|   |   |   Zona = Rural: '(20.25-40.5]' (4.0/1.0)
+|   |   Edad = '(73.5-inf)': '(60.75-inf)' (0.0)
+
+Number of Leaves  : 	35
+
+Size of the tree : 	55
+
+
+Time taken to build model: 0.08 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        7295               75.1055 %
+Incorrectly Classified Instances      2418               24.8945 %
+Kappa statistic                          0.6572
+Mean absolute error                      0.1749
+Root mean squared error                  0.2971
+Relative absolute error                 48.0832 %
+Root relative squared error             69.6507 %
+Total Number of Instances             9713     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,790    0,041    0,746      0,790    0,768      0,731    0,925     0,654     '(-inf-20.25]'
+                 0,800    0,164    0,712      0,800    0,754      0,620    0,892     0,719     '(20.25-40.5]'
+                 0,813    0,023    0,934      0,813    0,870      0,826    0,958     0,887     '(40.5-60.75]'
+                 0,590    0,117    0,623      0,590    0,606      0,483    0,844     0,630     '(60.75-inf)'
+Weighted Avg.    0,751    0,096    0,758      0,751    0,752      0,659    0,903     0,736     
+
+=== Confusion Matrix ===
+
+    a    b    c    d   <-- classified as
+ 1022  123  145    3 |    a = '(-inf-20.25]'
+   13 2620    3  637 |    b = '(20.25-40.5]'
+  261   40 2241  213 |    c = '(40.5-60.75]'
+   74  896   10 1412 |    d = '(60.75-inf)'
